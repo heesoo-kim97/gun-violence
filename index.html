@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/deck.gl@latest/dist.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="./styles.css">
+    <title>Gun Violence Map</title>
+</head>
+<body>
+    <div class="full-container">
+        <div class="container1 gray">
+            Gun Violence In United States
+        </div>
+        <div class="container2 gray">
+            <div>Select Date Range</div>
+            <input title="dateRange" type="text" name="daterange" value="01/01/2013 - 12/31/2018" />
+        </div>
+        <div class="container3 gray">
+            <div id="map-container">
+                <div id="tooltip"></div>
+            </div>
+        </div>
+        <div class="container4 gray">
+            <div class="total-case">Total Case:</div>
+            <div class="total-case-num">124,207</div>
+        </div>
+        <div class="container5 gray"></div>
+        <div class="container6 gray"></div>
+        <div class="container7 gray"></div>
+    </div>
+    <script src="./gun.js"></script>
+</body>
+</html>
