@@ -25,7 +25,7 @@ const tooltip = document.getElementById("tooltip");
     })
     .catch(error => {
       console.log('Error:', error)
-    }); 
+    });
 
 const showToolTip = (object, x, y) => {
       console.log( object);
@@ -51,14 +51,14 @@ const hideToolTip = () => {
   }
 }) */
 
-const createDeck = () => { 
+const createDeck = () => {
   deckgl = new deck.DeckGL({
       container: 'map-container',
       // Set your Mapbox access token here
       mapboxApiAccessToken: 'pk.eyJ1IjoiaHNraW04ODk0IiwiYSI6ImNsamd6cGwwdDBkaTEzcXA1bThiYjU0d3UifQ.ROUZosmduCnZ-BF8kdlw8A',
 
       mapStyle: 'mapbox://styles/mapbox/dark-v10',
-      
+
 
       initialViewState: {
         latitude: 39.7392,
@@ -70,9 +70,9 @@ const createDeck = () => {
         pitch: 0,
       },
       controller: true,
-    
+
       /* Possible Layers: ScatterplotLayer, ArcLayer, LineLayer, PolygonLayer, GeoJsonLayer, IconLayer, TextLayer, HexagonLayer
-      HeatmapLayer, 3D Layer, TripsLayer, Custom Layer*/
+      HeatmapLayer, 3D Layer, TripsLayer, Custom Layer*/ //
       layers: [scatterplotLayer, heatmapLayer, hexagonLayer],
       getTooltip: ({object}) => object && {
         html: `<div>Occurred on: ${object.date}</div>
@@ -137,8 +137,8 @@ const createDeck = () => {
           hideToolTip();
         }
           /*info.object && alert(`${info.object.properties.name} (${info.object.properties.abbrev})`);*/
-          
-        
+
+
         /*
         const el = document.getElementById('tooltip');
         if(object) {
